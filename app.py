@@ -5,8 +5,11 @@ app = Flask(__name__)
 def index():
     return render_template('helloflask.html')
  
-@app.route('/hello')
+@app.route('/product')
 def hello():
-    return render_template('product.html.html')
- 
+    return render_template('product.html')
+
+@app.route('/cart')
+def hello():
+    return render_template('cart.html') 
 app.run(debug = True)
